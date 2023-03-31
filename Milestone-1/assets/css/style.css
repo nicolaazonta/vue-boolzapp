@@ -21,7 +21,7 @@ main{
 .my_profile,
 .notifications,
 .search_box{
-    height: 3rem;
+    min-height: 3rem;
     border: 1px dashed black;
 }
 .contacts{
