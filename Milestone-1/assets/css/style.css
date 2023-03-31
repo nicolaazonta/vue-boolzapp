@@ -15,7 +15,24 @@ main{
     width: 18rem;
     background-color: aqua;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+.my_profile,
+.notifications,
+.search_box{
+    height: 3rem;
+    border: 1px dashed black;
+}
+.contacts{
+    flex-grow: 1;
+    border: 1px dashed black;
+    overflow-y: auto;
+}
+
+
+
+
 .right_bar{
     width: calc(100% - 18rem);
     background-color:cadetblue;
@@ -31,6 +48,8 @@ main{
     height: 3rem;
     background-color: blueviolet;
 }
+
+
 
 
 
