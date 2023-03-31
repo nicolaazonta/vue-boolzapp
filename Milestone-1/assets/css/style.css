@@ -68,6 +68,7 @@ main{
 .single_contact{
     height: 4rem;
     border: 1px solid black;
+    border-radius: .5rem;
 }
 .single_contact img{
     max-height: 100%;
