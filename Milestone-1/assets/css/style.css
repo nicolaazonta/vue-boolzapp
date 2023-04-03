@@ -54,6 +54,10 @@ main{
     background-color: lightgreen;
     color: black;
 }
+.notifications .fa-bell-slash{
+    aspect-ratio: 1;
+    color: white;
+}
 .sidebar .my_profile,
 .sidebar .notifications,
 .sidebar .search_box{
@@ -110,11 +114,11 @@ main{
     overflow-y: auto;
     border: 1px solid black;    
 }
-.message_container .received{
+.message_container ul .received{
     align-self: flex-start;
     background-color: lightgreen;
 }
-.message_container .sent{
+.message_container ul .sent{
     align-self: flex-end;
     background-color: lightyellow;
 }

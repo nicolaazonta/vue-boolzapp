@@ -37,14 +37,15 @@
                         <span class="text_small text-decoration-underline">Turn on desktop notifications</span>
                     </div>
                 </div>
-                <div class="search_box d-flex align-content-center"><!-- search barcontacts section -->
+                <div class="search_box d-flex align-content-center"><!-- search bar contacts section -->
                     <input class="form-control bg-black m-1 text-light" type="text" placeholder="Find or start a new chat" aria-label="searchContact">
                 </div>
 
                 <div class="contacts "><!-- list of contacts  -->
                     <div class="single_contact d-flex justify-content-between p-2 my-1"
                     v-for="(contact, index) in contacts"
-                    :class="index === isActive ? 'active' : ''">
+                    :class="index === activeContact ? 'active' : ''"
+                    @click="selectContact(index)">
                         <div class="left_pack d-flex">
                             <div class="sub_left_pack">
                                 <img class="rounded-circle" :src="`./assets/img/${contact.avatar}.jpg`" alt="contact x avatar">
@@ -84,9 +85,9 @@
                 </div>
                 </div>
 
-                <div class="message_container d-flex flex-column">
-                    <ul v-for="(message, index) in (contacts[isActive].messages)">
-                        <li class="card" :class="{{message[index].status}}">
+                <div class="message_container">
+                    <ul class="d-flex flex-column">
+                        <li class="card p-2" v-for="(message, index) in contacts[activeContact].messages" :class="message.status">
                             {{message.message}}
                         </li>
                     </ul>     
