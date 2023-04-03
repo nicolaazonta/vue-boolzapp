@@ -44,18 +44,18 @@
                 <div class="contacts "><!-- list of contacts  -->
                     <div class="single_contact d-flex justify-content-between p-2 my-1"
                     v-for="(contact, index) in contacts"
-                    :class="index === activeContact ? 'active' : ''">
+                    :class="index === isActive ? 'active' : ''">
                         <div class="left_pack d-flex">
                             <div class="sub_left_pack">
                                 <img class="img-fluid rounded-circle" :src="`./assets/img/{contact.avatar}.jpg`" alt="contact x avatar">
                             </div>
                             <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
                                 <span>{{contact.name}}</span>
-                                <span class="text_small">{{contact.messages.message}}</span>
+                                <span class="text_small">{{contact.messages[contact.messages.length - 1].message}}</span>
                             </div>
                         </div>
                         <div class="right_pack d-flex">
-                            <!-- <span class="text_small">{{contact.messages[2].date}}</span> -->    
+                           <!--  <span class="text_small">{{contact.messages[slice(-1)]date}}</span> -->    
                         </div>
                     </div>
                     
