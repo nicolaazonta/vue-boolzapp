@@ -74,6 +74,7 @@ main{
 }
 .single_contact img{
     max-height: 100%;
+    aspect-ratio: 1;
 }
 ::-webkit-scrollbar {
     width: 5px;
