@@ -50,7 +50,7 @@
                             <div class="sub_left_pack">
                                 <img class="rounded-circle" :src="`./assets/img/${contact.avatar}.jpg`" alt="contact x avatar">
                             </div>
-                            <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
+                            <div class="sub_right_pack d-flex flex-column justify-content-around px-2">
                                 <span>{{contact.name}}</span>
                                 <span class="text_small">{{contact.messages[contact.messages.length - 1].message}}</span>
                             </div>
@@ -67,14 +67,14 @@
             <div class="right_big_bar">
                 <div class="top_bar">
                     <div class="contact_profile d-flex justify-content-between
-                align-content-center p-2"><!-- my profile on sidebar -->
+                align-content-center p-2">
                         <div class="left_pack d-flex">
                             <div class="sub_left_pack">
-                                <img class="img-fluid rounded-circle" src="./assets/img/avatar_2.jpg" alt="contact x avatar">
+                                <img class="img-fluid rounded-circle" :src="`./assets/img/${contacts[activeContact].avatar}.jpg`" alt="contact x avatar"><!-- `./assets/img/${contacts[activeContact].avatar}.jpg` -->
                             </div>
                             <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
-                                <span>Cinzia</span>
-                                <span class="text_small">Last sent message today at 12:00</span>
+                                <span>{{contacts[activeContact].name}}</span>
+                                <span class="text_small">Ultimo accesso oggi alle {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}</span>
                             </div>
                         </div>
                     <div class="right_pack d-flex justify-content-around align-items-center">
