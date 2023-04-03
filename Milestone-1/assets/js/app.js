@@ -3,6 +3,7 @@ createApp({
     data(){
         return{
             activeContact: 0,
+            textMessage : null,
             contacts: [
                 {
                     name: 'Michele',
@@ -176,12 +177,12 @@ createApp({
        sendMessage(){
            let newMessage = {
                date: '11:00',
-               message: 'textMessage',
+               message: this.textMessage,
                status: 'sent' 
             };
             this.textMessage='';
             console.log('ENTER');
-            //contacts[activeContact].messages.push(newMessage)
+            contacts[activeContact].messages.push(newMessage);
        }
     }
 }).mount('#app')
