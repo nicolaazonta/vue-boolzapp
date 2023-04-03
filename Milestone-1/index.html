@@ -85,21 +85,12 @@
                 </div>
 
                 <div class="message_container d-flex flex-column">
-                   <div class="card received">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
-                   </div>
-                   <div class="card received">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
-                   </div>
-                   <div class="card sent">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
-                   </div>
-                   <div class="card received">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
-                   </div>
-                   <div class="card sent">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
-                   </div>
+                    <ul v-for="(message, index) in (contacts[isActive].messages)">
+                        <li class="card" :class="{{message[index].status}}">
+                            {{message.message}}
+                        </li>
+                    </ul>     
+                    
                    
                 </div>
 

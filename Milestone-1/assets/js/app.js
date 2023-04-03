@@ -2,7 +2,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
-            isActive: null,
+            isActive: 0,
             contacts: [
                 {
                     name: 'Michele',

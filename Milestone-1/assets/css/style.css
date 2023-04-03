@@ -37,6 +37,9 @@ main{
     max-height: 100%;
     margin: auto;
 }
+.active{
+    background-color: var(--bg--gold)!important ;
+}
 
 
 /* #region-------------sidebar */
@@ -107,16 +110,16 @@ main{
     overflow-y: auto;
     border: 1px solid black;    
 }
-.message_container>.received{
+.message_container .received{
     align-self: flex-start;
     background-color: lightgreen;
 }
-.message_container>.sent{
+.message_container .sent{
     align-self: flex-end;
     background-color: lightyellow;
 }
-.message_container>.sent,
-.message_container>.received{
+.message_container .sent,
+.message_container .received{
     max-width:18rem;
     margin: 1rem;
     padding: .25rem;
