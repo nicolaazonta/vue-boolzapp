@@ -172,7 +172,7 @@ createApp({
     methods:{
        selectContact(index){
             this.activeContact = index;
-            console.log('cliccato' + index);
+            //console.log('cliccato' + index);
        },
        sendMessage(){
            let newMessage = {
@@ -182,7 +182,7 @@ createApp({
             };
             this.textMessage='';
             console.log('ENTER');
-            contacts[activeContact].messages.push(newMessage);
+            this.contacts[this.activeContact].messages.push(newMessage);
        }
     }
 }).mount('#app')
