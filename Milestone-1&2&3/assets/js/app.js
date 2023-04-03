@@ -4,7 +4,7 @@ createApp({
         return{
             activeContact: 0,
             textMessage : null,
-            randomWords: ['prosciutto', 'cacao', 'marmellata', 'le 16:40 e tutto va bene', 'ho anche dei difetti'],
+            randomWords: ['prosciutto', 'cacao', 'marmellata', 'le 16:40 e tutto va bene', 'ho anche dei difetti', 'a volte si, a volte pure', 'mayday mayday mayday', 'lè tutto un corar su e zo', 'ma perchè hai bruciato il rum?'],
             contacts: [
                 {
                     name: 'Michele',
@@ -182,14 +182,12 @@ createApp({
                status: 'sent' 
             };
             this.textMessage='';
-            console.log('ENTER');
             this.contacts[this.activeContact].messages.push(newMessage);
             //setTimeout(randomMessage(), 1000)
             setTimeout(() => {
-                console.log('oppa qua');
-                let newRandomMessage = {
+                    let newRandomMessage = {
                     date: '11:00',
-                    message: randomWords[Math.floor(Math.random()* randomWords.length)],
+                    message: this.randomWords[Math.floor(Math.random()* this.randomWords.length)],
                     status: 'received' 
                  };
                  this.contacts[this.activeContact].messages.push(newRandomMessage);
