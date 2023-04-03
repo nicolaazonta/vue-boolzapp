@@ -170,7 +170,7 @@ createApp({
     },
     methods:{
        selectContact(index){
-            activeContact = index;
+            this.activeContact = index;
             console.log('cliccato' + index);
        }
     }

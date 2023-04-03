@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="message_container">
-                    <ul class="d-flex flex-column">
+                    <ul class="p-0 d-flex flex-column">
                         <li class="card p-2" v-for="(message, index) in contacts[activeContact].messages" :class="message.status">
                             {{message.message}}
                         </li>
