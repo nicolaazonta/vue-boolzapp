@@ -4,6 +4,7 @@ createApp({
         return{
             activeContact: 0,
             textMessage : null,
+            randomWords: ['prosciutto', 'cacao', 'marmellata', 'le 16:40 e tutto va bene', 'ho anche dei difetti'],
             contacts: [
                 {
                     name: 'Michele',
@@ -188,7 +189,7 @@ createApp({
                 console.log('oppa qua');
                 let newRandomMessage = {
                     date: '11:00',
-                    message: 'prosciutto',
+                    message: randomWords[Math.floor(Math.random()* randomWords.length)],
                     status: 'received' 
                  };
                  this.contacts[this.activeContact].messages.push(newRandomMessage);
