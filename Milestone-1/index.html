@@ -98,7 +98,10 @@
                 <div class="bottom_bar">
                     <div class="search_box d-flex align-items-center justify-content-around"><!-- search barcontacts section -->
                         <i class="px-3 fa-regular fa-face-surprise"></i>
-                        <input class="form-control bg-black m-1 text-light" type="text" placeholder="Write a message" aria-label="searchContact">
+                        <input 
+                        class="form-control bg-black m-1 text-light" type="text"
+                        @keyup.enter="sendMessage"
+                        v-model="textMessage">
                         <i class="px-3 fa-solid fa-microphone"></i>
                     </div>
                 </div>

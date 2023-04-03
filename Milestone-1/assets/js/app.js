@@ -172,6 +172,16 @@ createApp({
        selectContact(index){
             this.activeContact = index;
             console.log('cliccato' + index);
+       },
+       sendMessage(){
+           let newMessage = {
+               date: '11:00',
+               message: 'textMessage',
+               status: 'sent' 
+            };
+            this.textMessage='';
+            console.log('ENTER');
+            //contacts[activeContact].messages.push(newMessage)
        }
     }
 }).mount('#app')
