@@ -42,87 +42,40 @@
                 </div>
 
                 <div class="contacts "><!-- list of contacts  -->
-                    <div class="single_contact d-flex justify-content-between p-2
-                    my-1">
+                    <div class="single_contact d-flex justify-content-between p-2 my-1"
+                    v-for="(contact, index) in contacts"
+                    :class="index === activeContact ? 'active' : ''">
                         <div class="left_pack d-flex">
                             <div class="sub_left_pack">
-                                <img class="img-fluid rounded-circle" src="./assets/img/avatar_1.jpg" alt="contact x avatar">
+                                <img class="img-fluid rounded-circle" :src="`./assets/img/{contact.avatar}.jpg`" alt="contact x avatar">
                             </div>
                             <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
-                                <span>Cinzia</span>
-                                <span class="text_small">Last sent message</span>
+                                <span>{{contact.name}}</span>
+                                <span class="text_small">{{contact.messages.message}}</span>
                             </div>
                         </div>
                         <div class="right_pack d-flex">
-                            <span class="text_small">12:00</span>    
+                            <!-- <span class="text_small">{{contact.messages[2].date}}</span> -->    
                         </div>
                     </div>
-                    <div class="single_contact d-flex justify-content-between p-2
-                    my-1">
-                        <div class="left_pack d-flex">
-                            <div class="sub_left_pack">
-                                <img class="img-fluid rounded-circle" src="./assets/img/avatar_2.jpg" alt="contact x avatar">
-                            </div>
-                            <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
-                                <span>Matteo</span>
-                                <span class="text_small">Last sent message</span>
-                            </div>
-                        </div>
-                        <div class="right_pack d-flex">
-                            <span class="text_small">12:00</span>    
-                        </div>
-                    </div>
-                    <div class="single_contact d-flex justify-content-between p-2
-                    my-1">
-                        <div class="left_pack d-flex">
-                            <div class="sub_left_pack">
-                                <img class="img-fluid rounded-circle" src="./assets/img/avatar_3.jpg" alt="contact x avatar">
-                            </div>
-                            <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
-                                <span>Luca</span>
-                                <span class="text_small">Last sent message</span>
-                            </div>
-                        </div>
-                        <div class="right_pack d-flex">
-                            <span class="text_small">12:00</span>    
-                        </div>
-                    </div>
-                    <div class="single_contact d-flex justify-content-between p-2
-                    my-1">
-                        <div class="left_pack d-flex">
-                            <div class="sub_left_pack">
-                                <img class="img-fluid rounded-circle" src="./assets/img/avatar_4.jpg" alt="contact x avatar">
-                            </div>
-                            <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
-                                <span>Alice</span>
-                                <span class="text_small">Last sent message</span>
-                            </div>
-                        </div>
-                        <div class="right_pack d-flex">
-                            <span class="text_small">12:00</span>    
-                        </div>
-                    </div>
+                    
                 </div>
 
             </div>
 
             <div class="right_big_bar">
                 <div class="top_bar">
-                    <div class="my_profile d-flex justify-content-between
+                    <div class="contact_profile d-flex justify-content-between
                 align-content-center p-2"><!-- my profile on sidebar -->
-                    <!-- <div class="left_pack d-flex">
-                        <img class="img-fluid rounded-circle" src="./assets/img/avatar_io.jpg" alt="my avatar">
-                        <span class="px-1 align-self-center">Nicola</span>
-                    </div> -->
-                    <div class="left_pack d-flex">
-                        <div class="sub_left_pack">
-                            <img class="img-fluid rounded-circle" src="./assets/img/avatar_2.jpg" alt="contact x avatar">
+                        <div class="left_pack d-flex">
+                            <div class="sub_left_pack">
+                                <img class="img-fluid rounded-circle" src="./assets/img/avatar_2.jpg" alt="contact x avatar">
+                            </div>
+                            <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
+                                <span>Cinzia</span>
+                                <span class="text_small">Last sent message today at 12:00</span>
+                            </div>
                         </div>
-                        <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
-                            <span>Matteo</span>
-                            <span class="text_small">Last sent message today at 12:00</span>
-                        </div>
-                    </div>
                     <div class="right_pack d-flex justify-content-around align-items-center">
                         <i class=" fa-solid fa-magnifying-glass"></i>
                         <i class="px-1 fa-solid fa-paperclip"></i>
@@ -131,11 +84,32 @@
                 </div>
                 </div>
 
-                <div class="message_container">
+                <div class="message_container d-flex flex-column">
+                   <div class="card received">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
+                   </div>
+                   <div class="card received">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
+                   </div>
+                   <div class="card sent">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
+                   </div>
+                   <div class="card received">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
+                   </div>
+                   <div class="card sent">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rerum dicta repu</p>
+                   </div>
                    
                 </div>
 
-                <div class="bottom_bar"></div>
+                <div class="bottom_bar">
+                    <div class="search_box d-flex align-items-center justify-content-around"><!-- search barcontacts section -->
+                        <i class="px-3 fa-regular fa-face-surprise"></i>
+                        <input class="form-control bg-black m-1 text-light" type="text" placeholder="Write a message" aria-label="searchContact">
+                        <i class="px-3 fa-solid fa-microphone"></i>
+                    </div>
+                </div>
             </div>
 
 
