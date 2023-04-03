@@ -169,12 +169,12 @@ createApp({
             ]
         }        
     },
-    methods:{
-       selectContact(index){
+    methods:{  
+        selectContact(index){
             this.activeContact = index;
             //console.log('cliccato' + index);
-       },
-       sendMessage(){
+        },
+        sendMessage(){
            let newMessage = {
                date: '11:00',
                message: this.textMessage,
@@ -183,6 +183,16 @@ createApp({
             this.textMessage='';
             console.log('ENTER');
             this.contacts[this.activeContact].messages.push(newMessage);
-       }
+            //setTimeout(randomMessage(), 1000)
+            setTimeout(() => {
+                console.log('oppa qua');
+                let newRandomMessage = {
+                    date: '11:00',
+                    message: 'prosciutto',
+                    status: 'received' 
+                 };
+                 this.contacts[this.activeContact].messages.push(newRandomMessage);
+              }, 1000);
+        },
     }
 }).mount('#app')
