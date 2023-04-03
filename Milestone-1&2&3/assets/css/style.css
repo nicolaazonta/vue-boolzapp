@@ -129,6 +129,12 @@ main{
     padding: .25rem;
     color: black;
 }
+.message_container li span{
+    align-self: flex-end;
+    justify-self: end;
+    font-size: .6rem;
+    color: gray;
+}
 .bottom_bar{
     background-color:var(--bg--gold);
     border: 1px solid black;    
