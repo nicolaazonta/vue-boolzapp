@@ -38,13 +38,14 @@
                     </div>
                 </div>
                 <div class="search_box d-flex align-content-center"><!-- search bar contacts section -->
-                    <input @keyup="searchContact" class="form-control bg-black m-1 text-light" type="text" placeholder="Find or start a new chat" aria-label="searchContact" v-model="userSearch">
+                    <input v-model="userSearch" @keyup="searchContact" class="form-control bg-black m-1 text-light" type="text" placeholder="Find or start a new chat" aria-label="searchContact"
+                    >
                 </div>
 
                 <div class="contacts "><!-- contacts list  -->
                     <div class="single_contact d-flex justify-content-between p-2 my-1"
                     v-for="(contact, index) in contacts"
-                    :class="index === activeContact ? 'active' : ''"
+                    :class="index === activeContact ? 'active' : '', contact.visible === true ? 'show' : 'notShow'"
                     @click="selectContact(index)">
                         <div class="left_pack d-flex">
                             <div class="sub_left_pack">

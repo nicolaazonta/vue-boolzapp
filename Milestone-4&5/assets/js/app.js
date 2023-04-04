@@ -205,6 +205,7 @@ createApp({
                     console.log('urca');
                     contact.visible=true;
                 }
+
             });
         }
     }

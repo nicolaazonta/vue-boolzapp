@@ -40,6 +40,12 @@ main{
 .active{
     background-color: var(--bg--gold)!important ;
 }
+.notShow{
+    display:none!important ;
+}
+.show{
+    display:block;
+}
 
 
 /* #region-------------sidebar */
