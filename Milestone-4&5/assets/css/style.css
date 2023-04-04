@@ -55,10 +55,6 @@ main{
     display: flex;
     flex-direction: column;
 }
-.notifications{
-    /* background-color: lightgreen;
-    color: black; */
-}
 .notifications .fa-bell-slash{
     aspect-ratio: 1;
 }
