@@ -197,9 +197,11 @@ createApp({
         },
         searchContact(){
             //console.log(this.userSearch);
-            contact.visible=false;
+            let word = this.userSearch;
+            
             this.contacts.forEach(contact => {
-                if (contact.name === this.userSearch) {
+                contact.visible=false;
+                if (contact.name.toLowerCase() === word.toLowerCase()) {
                     console.log('urca');
                 }
             });
