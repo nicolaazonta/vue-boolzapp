@@ -210,7 +210,8 @@ createApp({
         deleteMessage(message,i){
             console.log(message.message);
             console.log(i);
-            this.contacts[this.deleteMessageactiveContact].messages.splice(i, 1);
+            this.contacts[this.activeContact].messages.splice(i, 1);
+
         }
     }
 }).mount('#app')

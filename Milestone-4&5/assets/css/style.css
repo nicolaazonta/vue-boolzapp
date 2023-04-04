@@ -1,44 +1,27 @@
 
 
+/* #endregion-------------theme colors */
+:root{
+    --bg--dark: #020107;
+    --bg--light-dark: #37373a;
+    --bg--violet: #301E67;
+    --bg--light-blue: #5B8FB9;
+    --bg--light-green: #B6EADA;
+    --txt--light: rgba(255, 255, 255, 0.753);
+
+}
+/* #endregion-------------theme colors */
 
 
 /* #region-------------utilities */
-:root{
-    --bg--dark-green: #033B3D;
-    --bg--green: #0D4A3A;
-    --bg--light-green: #2D5731;
-    --bg--very-light-green: #99b543;
-    --bg--gold: #7B6823;
-}
 .dashed{
     border: 1px dashed yellow;
 }
 .text_small{
     font-size: .75rem;
 }
-/* .text_small{
-    font-size: .rem;
-} */
-/* #endregion-------------utilities */
-
-
-
-
-body{
-    background-color: black;  
-    width: 100vw;
-    height: 100vh; 
-    color: white; 
-}
-
-main{
-    width: calc(100vw - 20rem);
-    height: calc(100vh - 10rem);
-    max-height: 100%;
-    margin: auto;
-}
 .active{
-    background-color: var(--bg--gold)!important ;
+    background-color: var(--bg--light-dark)!important ;
 }
 .notShow{
     display:none!important ;
@@ -46,23 +29,38 @@ main{
 .show{
     display:block;
 }
+/* #endregion-------------utilities */
+
+/* #region-------------commons */
+body{
+    background-color: var(--bg--light-dark);  
+    width: 100vw;
+    height: 100vh; 
+}
+main{
+    width: calc(100vw - 20rem);
+    height: calc(100vh - 10rem);
+    max-height: 100%;
+    margin: auto;
+}
+/* #endregion-------------commons */
 
 
 /* #region-------------sidebar */
 .sidebar{
+    background-color: var(--bg--dark);
+    color: var(--txt--light);
     width: 18rem;
-    background-color: var(--bg--dark-green);
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 .notifications{
-    background-color: lightgreen;
-    color: black;
+    /* background-color: lightgreen;
+    color: black; */
 }
 .notifications .fa-bell-slash{
     aspect-ratio: 1;
-    color: white;
 }
 .sidebar .my_profile,
 .sidebar .notifications,
@@ -77,13 +75,11 @@ main{
     overflow-y: auto;
     padding: .25rem;
     border: 1px solid black;
-    background-color: lightgreen;
 }
 .single_contact{
     height: 4rem;
     border: 1px solid black;
     border-radius: .5rem;
-    background-color: var(--bg--dark-green);
 }
 .single_contact img{
     max-height: 100%;
@@ -121,15 +117,15 @@ main{
     border: 1px solid black;    
 }
 .message_container i{
-    color: gray;
+    color: var(--bg--light-dark);
 }
 .message_container ul .received{
     align-self: flex-start;
-    background-color: lightgreen;
+    background-color: var(--bg--light-blue);
 }
 .message_container ul .sent{
     align-self: flex-end;
-    background-color: lightyellow;
+    background-color:var(--bg--light-green);
 }
 .message_container .sent,
 .message_container .received{
@@ -142,11 +138,11 @@ main{
     align-self: flex-end;
     justify-self: end;
     font-size: .6rem;
-    color: gray;
 }
 .bottom_bar{
-    background-color:var(--bg--gold);
+    background-color:var(--bg--dark);
     border: 1px solid black;    
+    color: var(--txt--light);
 }
 .top_bar{
     background-color:var(--bg--gold);
@@ -157,9 +153,11 @@ main{
 .fa-paperclip{
     rotate: 90deg;
 }
-.right_big_bar .top_bar .contact_profile{
+.right_big_bar .contact_profile{
     height: 3.5rem;
     border: 1px solid black;
+    background-color: var(--bg--dark);
+    color: var(--txt--light);
 }
 
 
