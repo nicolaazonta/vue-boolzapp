@@ -200,9 +200,10 @@ createApp({
             let word = this.userSearch;
             
             this.contacts.forEach(contact => {
-                contact.visible=false;
-                if (contact.name.toLowerCase() === word.toLowerCase()) {
+                contact.visible = false;
+                if ((contact.name.toLowerCase()).includes(word.toLowerCase())) {
                     console.log('urca');
+                    contact.visible=true;
                 }
             });
         }
