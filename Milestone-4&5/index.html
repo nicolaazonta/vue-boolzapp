@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="search_box d-flex align-content-center"><!-- search bar contacts section -->
-                    <input class="form-control bg-black m-1 text-light" type="text" placeholder="Find or start a new chat" aria-label="searchContact" v-model="userSearch">
+                    <input @keyup="searchContact" class="form-control bg-black m-1 text-light" type="text" placeholder="Find or start a new chat" aria-label="searchContact" v-model="userSearch">
                 </div>
 
                 <div class="contacts "><!-- contacts list  -->
@@ -67,10 +67,10 @@
             <div class="right_big_bar">
                 <div class="top_bar">
                     <div class="contact_profile d-flex justify-content-between
-                align-content-center p-2">
+                align-content-center p-2"><!-- selected profile contact section -->
                         <div class="left_pack d-flex">
                             <div class="sub_left_pack">
-                                <img class="img-fluid rounded-circle" :src="`./assets/img/${contacts[activeContact].avatar}.jpg`" alt="contact x avatar"><!-- `./assets/img/${contacts[activeContact].avatar}.jpg` -->
+                                <img class="img-fluid rounded-circle" :src="`./assets/img/${contacts[activeContact].avatar}.jpg`" alt="contact x avatar">
                             </div>
                             <div class="sub_right_pack d-flex flex-column justify-content-around px-1">
                                 <span>{{contacts[activeContact].name}}</span>

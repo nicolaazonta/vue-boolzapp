@@ -4,6 +4,7 @@ createApp({
         return{
             activeContact: 0,
             textMessage : null,
+            userSearch : null,
             randomWords: ['prosciutto', 'cacao', 'marmellata', 'le 16:40 e tutto va bene', 'ho anche dei difetti', 'a volte si, a volte pure', 'mayday mayday mayday', 'lè tutto un corar su e zo', 'ma perchè hai bruciato il rum?'],
             contacts: [
                 {
@@ -177,7 +178,6 @@ createApp({
         },
         sendMessage(){
             let time = new Date().toJSON().slice(11, 16);
-            console.log(time);
 
             let newMessage = {
                 date: time,
@@ -195,5 +195,14 @@ createApp({
                  this.contacts[this.activeContact].messages.push(newRandomMessage);
               }, 1000);
         },
+        searchContact(){
+            //console.log(this.userSearch);
+            contact.visible=false;
+            this.contacts.forEach(contact => {
+                if (contact.name === this.userSearch) {
+                    console.log('urca');
+                }
+            });
+        }
     }
 }).mount('#app')
