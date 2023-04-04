@@ -202,11 +202,15 @@ createApp({
             this.contacts.forEach(contact => {
                 contact.visible = false;
                 if ((contact.name.toLowerCase()).includes(word.toLowerCase())) {
-                    console.log('urca');
                     contact.visible=true;
                 }
 
             });
+        },
+        deleteMessage(message,i){
+            console.log(message.message);
+            console.log(i);
+            this.contacts[this.deleteMessageactiveContact].messages.splice(i, 1);
         }
     }
 }).mount('#app')
