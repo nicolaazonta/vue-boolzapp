@@ -208,8 +208,6 @@ createApp({
             });
         },
         deleteMessage(message,i){
-            console.log(message.message);
-            console.log(i);
             this.contacts[this.activeContact].messages.splice(i, 1);
 
         }
